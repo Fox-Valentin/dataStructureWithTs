@@ -3,13 +3,13 @@ import { ArrayCl } from "./Array";
 interface StackInter {
     push(el: any): any
     pop() :void
-    feek() :any
+    peek() :any
     isEmpty() :boolean
     getSize() :number
     getData() :string
 }
 
-class Stack {
+class Stack implements StackInter {
     private data: ArrayCl
     constructor (capa) {
         this.data = new ArrayCl(capa)
@@ -29,9 +29,9 @@ class Stack {
         this.data.removeLast()
     }
     /**
-     * feek
+     * peek
      */
-    public feek() {
+    public peek() {
         return this.data.getLast()
     }
     /**

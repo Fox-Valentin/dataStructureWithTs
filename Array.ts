@@ -11,6 +11,7 @@ class ArrayCl {
      * resize
      */
     private resize(len) {
+        len = Math.floor(len)
         var newAry = new Array(len)
         for (var i = 0; i < this.size; i++) {
             newAry[i] = this.data[i]
